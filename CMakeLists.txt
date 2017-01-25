@@ -32,8 +32,12 @@ MESSAGE( STATUS  "CAF" ${CAF_INCLUDE_DIRS} )
 
 add_executable( ${PROJECT_NAME} main.cpp )
 
+add_executable( helloworld helloworld.cpp )
+add_executable( example  example.cpp )
 #target_link_libraries(${PROJECT_NAME} curlcpp)
 target_link_libraries(${PROJECT_NAME} ${CAF_LIBRARIES})
+target_link_libraries(helloworld  ${CAF_LIBRARIES})
+target_link_libraries(example  ${CAF_LIBRARIES})
 
 
 
